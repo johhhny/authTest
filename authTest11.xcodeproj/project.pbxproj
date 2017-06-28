@@ -12,6 +12,7 @@
 		842C4CD31F02956100CBCA1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C4CD11F02956100CBCA1F /* Main.storyboard */; };
 		842C4CD51F02956100CBCA1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842C4CD41F02956100CBCA1F /* Assets.xcassets */; };
 		842C4CD81F02956100CBCA1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C4CD61F02956100CBCA1F /* LaunchScreen.storyboard */; };
+		CEA2BDCD1F03CCF50071BFCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA2BDCC1F03CCF50071BFCD /* GoogleService-Info.plist */; };
 		DB9490C182B8792D689FC009 /* Pods_authTest11.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243A72EA7D92B016F8FF8174 /* Pods_authTest11.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +27,7 @@
 		842C4CD91F02956100CBCA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AED97AE3612D348E653BA72A /* Pods-authTest11.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-authTest11.release.xcconfig"; path = "Pods/Target Support Files/Pods-authTest11/Pods-authTest11.release.xcconfig"; sourceTree = "<group>"; };
 		B1BF8007162CE8D6EF22ABEE /* Pods-authTest11.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-authTest11.debug.xcconfig"; path = "Pods/Target Support Files/Pods-authTest11/Pods-authTest11.debug.xcconfig"; sourceTree = "<group>"; };
+		CEA2BDCC1F03CCF50071BFCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +86,7 @@
 				842C4CD41F02956100CBCA1F /* Assets.xcassets */,
 				842C4CD61F02956100CBCA1F /* LaunchScreen.storyboard */,
 				842C4CD91F02956100CBCA1F /* Info.plist */,
+				CEA2BDCC1F03CCF50071BFCD /* GoogleService-Info.plist */,
 			);
 			path = authTest11;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				842C4CD81F02956100CBCA1F /* LaunchScreen.storyboard in Resources */,
+				CEA2BDCD1F03CCF50071BFCD /* GoogleService-Info.plist in Resources */,
 				842C4CD51F02956100CBCA1F /* Assets.xcassets in Resources */,
 				842C4CD31F02956100CBCA1F /* Main.storyboard in Resources */,
 			);
@@ -187,7 +191,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7B0B6B0643E8613F9DB62572 /* [CP] Embed Pods Frameworks */ = {
@@ -379,6 +383,7 @@
 				842C4CDE1F02956100CBCA1F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
