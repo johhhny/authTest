@@ -12,6 +12,7 @@
 		842C4CD31F02956100CBCA1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C4CD11F02956100CBCA1F /* Main.storyboard */; };
 		842C4CD51F02956100CBCA1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842C4CD41F02956100CBCA1F /* Assets.xcassets */; };
 		842C4CD81F02956100CBCA1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C4CD61F02956100CBCA1F /* LaunchScreen.storyboard */; };
+		CE41DA461F04E023006B4989 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41DA451F04E023006B4989 /* registerViewController.swift */; };
 		CEA2BDCD1F03CCF50071BFCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA2BDCC1F03CCF50071BFCD /* GoogleService-Info.plist */; };
 		DB9490C182B8792D689FC009 /* Pods_authTest11.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243A72EA7D92B016F8FF8174 /* Pods_authTest11.framework */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,7 @@
 		842C4CD91F02956100CBCA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AED97AE3612D348E653BA72A /* Pods-authTest11.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-authTest11.release.xcconfig"; path = "Pods/Target Support Files/Pods-authTest11/Pods-authTest11.release.xcconfig"; sourceTree = "<group>"; };
 		B1BF8007162CE8D6EF22ABEE /* Pods-authTest11.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-authTest11.debug.xcconfig"; path = "Pods/Target Support Files/Pods-authTest11/Pods-authTest11.debug.xcconfig"; sourceTree = "<group>"; };
+		CE41DA451F04E023006B4989 /* registerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
 		CEA2BDCC1F03CCF50071BFCD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,6 +84,7 @@
 			children = (
 				842C4CCD1F02956000CBCA1F /* AppDelegate.swift */,
 				842C4CCF1F02956000CBCA1F /* ViewController.swift */,
+				CE41DA451F04E023006B4989 /* registerViewController.swift */,
 				842C4CD11F02956100CBCA1F /* Main.storyboard */,
 				842C4CD41F02956100CBCA1F /* Assets.xcassets */,
 				842C4CD61F02956100CBCA1F /* LaunchScreen.storyboard */,
@@ -185,13 +188,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-authTest11-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		7B0B6B0643E8613F9DB62572 /* [CP] Embed Pods Frameworks */ = {
@@ -200,9 +206,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-authTest11/Pods-authTest11-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -216,6 +229,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE41DA461F04E023006B4989 /* registerViewController.swift in Sources */,
 				842C4CD01F02956000CBCA1F /* ViewController.swift in Sources */,
 				842C4CCE1F02956000CBCA1F /* AppDelegate.swift in Sources */,
 			);
