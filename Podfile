@@ -6,6 +6,8 @@ target 'authTest11' do
   use_frameworks!
   pod 'Firebase/Database'
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'IQKeyboardManagerSwift'
   # Pods for authTest11
 
 end
