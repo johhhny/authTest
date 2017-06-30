@@ -25,16 +25,13 @@ class registerViewController: UIViewController {
                         if let error = error {
                             print(error.localizedDescription)
                         } else {
-                            print("вошло")
-                            /*Auth.auth().currentUser?.sendEmailVerification { (error) in
-                                if let error = error {
-                                    print(error.localizedDescription)
-                                }
-                            }*/
                             let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                             changeRequest?.displayName = self.nickname.text
                             changeRequest?.commitChanges { (error) in
-                                // ...
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let vc = storyboard.instantiateViewController(withIdentifier: "vccc") as! ViewController
+                                vc.str = self.mailText.text!
+                            self.present(vc, animated: false, completion: nil)
                             }
                         }
                     }
@@ -57,14 +54,21 @@ class registerViewController: UIViewController {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        if segue.identifier == "segue1" {
+            //let testsViewController = segue.destination as! WebViewController1
+            //testsViewController.url1 = (test?.arrayOfTasks[currentCell.indexSect][currentCell.indexRow].url)!//"tests/ege/physics"
+            print("werwer")
+        }
+
+        
     }
-    */
+    
 
 }

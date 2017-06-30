@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var loginText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
     
+    var str = ""
     
     @IBAction func tapLogin(_ sender: UIButton) {
         if loginText.text != "" || passwordText.text != "" {
@@ -42,13 +43,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("efwefwef")
         print("1231231231231")
-        print("1223123131wtwegwegwegw")
-        print("efwefwef")
-        print("1231231231231")
-        print("1223123131wtwegwegwegw")
-        // Do any additional setup after loading the view, typically from a nib.
+        let user = Auth.auth().currentUser
+        if let user = user {
+            print(user.email)
+            loginText.text = str
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {
