@@ -92,6 +92,24 @@
             </objects>
             <point key="canvasLocation" x="-1068" y="335.98200899550227"/>
         </scene>
+        <!--Start View Controller-->
+        <scene sceneID="fsS-K6-Agb">
+            <objects>
+                <viewController storyboardIdentifier="qwerty" id="s2y-s2-3X6" customClass="StartViewController" customModule="authTest11" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="1uR-Df-53N"/>
+                        <viewControllerLayoutGuide type="bottom" id="Lub-7o-pR2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XSd-Ex-49P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VyH-7t-syu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1077" y="1008"/>
+        </scene>
         <!--Register View Controller-->
         <scene sceneID="Xzl-qU-Dz5">
             <objects>

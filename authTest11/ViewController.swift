@@ -30,6 +30,9 @@ class ViewController: UIViewController {
                             print(user.uid)
                             print(user.email)
                             print(user.displayName)
+                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                            let vc = storyboard.instantiateViewController(withIdentifier: "qwerty") as! StartViewController
+                            self.present(vc, animated: false, completion: nil)
                         } else {
                             print("Вы не подтвердили почту")
                         }

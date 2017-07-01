@@ -12,6 +12,7 @@
 		842C4CD31F02956100CBCA1F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C4CD11F02956100CBCA1F /* Main.storyboard */; };
 		842C4CD51F02956100CBCA1F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 842C4CD41F02956100CBCA1F /* Assets.xcassets */; };
 		842C4CD81F02956100CBCA1F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 842C4CD61F02956100CBCA1F /* LaunchScreen.storyboard */; };
+		8481CD651F07AEB200FED0B4 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8481CD641F07AEB200FED0B4 /* StartViewController.swift */; };
 		CE41DA461F04E023006B4989 /* registerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE41DA451F04E023006B4989 /* registerViewController.swift */; };
 		CEA2BDCD1F03CCF50071BFCD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CEA2BDCC1F03CCF50071BFCD /* GoogleService-Info.plist */; };
 		DB9490C182B8792D689FC009 /* Pods_authTest11.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 243A72EA7D92B016F8FF8174 /* Pods_authTest11.framework */; };
@@ -26,6 +27,7 @@
 		842C4CD41F02956100CBCA1F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		842C4CD71F02956100CBCA1F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		842C4CD91F02956100CBCA1F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8481CD641F07AEB200FED0B4 /* StartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		AED97AE3612D348E653BA72A /* Pods-authTest11.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-authTest11.release.xcconfig"; path = "Pods/Target Support Files/Pods-authTest11/Pods-authTest11.release.xcconfig"; sourceTree = "<group>"; };
 		B1BF8007162CE8D6EF22ABEE /* Pods-authTest11.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-authTest11.debug.xcconfig"; path = "Pods/Target Support Files/Pods-authTest11/Pods-authTest11.debug.xcconfig"; sourceTree = "<group>"; };
 		CE41DA451F04E023006B4989 /* registerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = registerViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				842C4CCD1F02956000CBCA1F /* AppDelegate.swift */,
 				842C4CCF1F02956000CBCA1F /* ViewController.swift */,
 				CE41DA451F04E023006B4989 /* registerViewController.swift */,
+				8481CD641F07AEB200FED0B4 /* StartViewController.swift */,
 				842C4CD11F02956100CBCA1F /* Main.storyboard */,
 				842C4CD41F02956100CBCA1F /* Assets.xcassets */,
 				842C4CD61F02956100CBCA1F /* LaunchScreen.storyboard */,
@@ -230,6 +233,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE41DA461F04E023006B4989 /* registerViewController.swift in Sources */,
+				8481CD651F07AEB200FED0B4 /* StartViewController.swift in Sources */,
 				842C4CD01F02956000CBCA1F /* ViewController.swift in Sources */,
 				842C4CCE1F02956000CBCA1F /* AppDelegate.swift in Sources */,
 			);
