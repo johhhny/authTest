@@ -23,16 +23,16 @@ class ViewController: UIViewController {
                 if let error = error {
                     print(error.localizedDescription)
                 } else {
-                    print("вошло")
                     let user = Auth.auth().currentUser
                     if let user = user {
-                        // The user's ID, unique to the Firebase project.
-                        // Do NOT use this value to authenticate with your backend server,
-                        // if you have one. Use getTokenWithCompletion:completion: instead.
-                        print(user.uid)
-                        print(user.email)
-                        print(user.displayName)
-                        // ...
+                        if user.isEmailVerified {
+                            print("вошло")
+                            print(user.uid)
+                            print(user.email)
+                            print(user.displayName)
+                        } else {
+                            print("Вы не подтвердили почту")
+                        }
                     }
                 }
             }
