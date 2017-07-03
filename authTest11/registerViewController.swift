@@ -14,6 +14,9 @@ class registerViewController: UIViewController {
     @IBOutlet weak var nickname: UITextField!
     @IBOutlet weak var mailText: UITextField!
     @IBOutlet weak var passwordText: UITextField!
+    @IBOutlet weak var mailZabyl: UITextField!
+    
+    var strr = ""
     
     @IBAction func tapRegister(_ sender: UIButton) {
         if mailText.text != "" || passwordText.text != "" {
@@ -25,14 +28,20 @@ class registerViewController: UIViewController {
                         if let error = error {
                             print(error.localizedDescription)
                         } else {
-                            let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
+                            Auth.auth().currentUser?.sendEmailVerification { (error) in
+                                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                                let vc = storyboard.instantiateViewController(withIdentifier: "vccc") as! ViewController
+                                vc.str = self.mailText.text!
+                                self.present(vc, animated: false, completion: nil)
+                            }
+                            /*let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
                             changeRequest?.displayName = self.nickname.text
                             changeRequest?.commitChanges { (error) in
                             let storyboard = UIStoryboard(name: "Main", bundle: nil)
                             let vc = storyboard.instantiateViewController(withIdentifier: "vccc") as! ViewController
                                 vc.str = self.mailText.text!
                             self.present(vc, animated: false, completion: nil)
-                            }
+                            }*/
                         }
                     }
                 }
@@ -42,9 +51,23 @@ class registerViewController: UIViewController {
         }
     }
     
+    @IBAction func sendParolTap(_ sender: UIButton) {
+        Auth.auth().sendPasswordReset(withEmail: strr) { (error) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let vc = storyboard.instantiateViewController(withIdentifier: "vccc") as! ViewController
+                vc.str = self.mailText.text!
+                self.present(vc, animated: false, completion: nil)
+                print("Пароль отправлен на почту")
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        mailZabyl.text = strr
         // Do any additional setup after loading the view.
     }
 
@@ -62,9 +85,9 @@ class registerViewController: UIViewController {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
         if segue.identifier == "segue1" {
-            //let testsViewController = segue.destination as! WebViewController1
-            //testsViewController.url1 = (test?.arrayOfTasks[currentCell.indexSect][currentCell.indexRow].url)!//"tests/ege/physics"
-            print("werwer")
+            /*let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyboard.instantiateViewController(withIdentifier: "qwerty") as! StartViewController
+            self.present(vc, animated: false, completion: nil)*/
         }
 
         
