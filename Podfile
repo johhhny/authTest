@@ -8,6 +8,7 @@ target 'authTest11' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'IQKeyboardManagerSwift'
+  pod 'Locksmith'
   # Pods for authTest11
 
 end

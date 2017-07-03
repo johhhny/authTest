@@ -34,14 +34,6 @@ class registerViewController: UIViewController {
                                 vc.str = self.mailText.text!
                                 self.present(vc, animated: false, completion: nil)
                             }
-                            /*let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
-                            changeRequest?.displayName = self.nickname.text
-                            changeRequest?.commitChanges { (error) in
-                            let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                            let vc = storyboard.instantiateViewController(withIdentifier: "vccc") as! ViewController
-                                vc.str = self.mailText.text!
-                            self.present(vc, animated: false, completion: nil)
-                            }*/
                         }
                     }
                 }
@@ -76,22 +68,11 @@ class registerViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
         if segue.identifier == "segue1" {
             /*let storyboard = UIStoryboard(name: "Main", bundle: nil)
             let vc = storyboard.instantiateViewController(withIdentifier: "qwerty") as! StartViewController
             self.present(vc, animated: false, completion: nil)*/
         }
-
-        
     }
-    
-
 }
